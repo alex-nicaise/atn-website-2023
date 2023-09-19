@@ -1,1 +1,1 @@
-# atn-website-2023
+Small website showcasing projects written with React, Typescript, and Vite.
