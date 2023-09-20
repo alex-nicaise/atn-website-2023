@@ -1,17 +1,14 @@
-import { useState } from "react";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
 
-  const [number, setNumber] = useState(0);
-
-  const handleClick = ():void => {
-    setNumber(Math.random)
-  }
-
   return (
     <>
-      <h1>Hello {number}</h1>
-      <button onClick={handleClick}>Click Me!</button>
+    <Header/>
+    <Body/>
+    <Footer/>
     </>
   )
 }
