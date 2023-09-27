@@ -16,4 +16,4 @@ const Project = (props: Props) => {
   )
 }
 
-export default Project
+export default Project;

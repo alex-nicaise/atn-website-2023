@@ -1,5 +1,6 @@
 import Project from "./Project";
 import projectsObj from "../API/projectsObj";
+import ContactForm from "./ContactForm";
 
 const Main = () => {
 
@@ -29,7 +30,8 @@ const Main = () => {
           }
         </div>
         <div id="contact">
-          <h1>Contact</h1>
+          <h1>Contact Me</h1>
+          <ContactForm/>
         </div>
     </main>
   )
