@@ -1,10 +1,12 @@
+import React from 'react';
+
 interface Props {
     imgUrl: string;
     demoUrl: string;
     srcCodeUrl: string;
 }
 
-const Project = (props: Props) => {
+const Project = (props: Props): React.JSX.Element => {
   return (
     <div className="project">
         <div className="project-img" style={{backgroundImage: `url(${props.imgUrl})`}}></div>

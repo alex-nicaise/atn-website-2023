@@ -1,7 +1,8 @@
 import { FormikHelpers, useFormik } from 'formik';
+import React from 'react';
 import * as Yup from 'yup';
 
-const ContactForm = () => {
+const ContactForm = (): React.JSX.Element => {
 
     interface formValues {
         fullName: string;

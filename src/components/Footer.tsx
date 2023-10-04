@@ -1,4 +1,6 @@
-const Footer = () => {
+import React from 'react';
+
+const Footer = (): React.JSX.Element => {
   return (
     <div id="footer">
         <div id="socials">

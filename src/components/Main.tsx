@@ -1,8 +1,9 @@
+import React from 'react';
 import Project from "./Project";
 import projectsObj from "../API/projectsObj";
 import ContactForm from "./ContactForm";
 
-const Main = () => {
+const Main = (): React.JSX.Element => {
 
   interface ProjectType {
     imgUrl: string;
