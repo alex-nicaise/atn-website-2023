@@ -4,10 +4,10 @@ import ContactForm from "./ContactForm";
 
 const Main = () => {
 
-  type ProjectType = {
-    imgUrl: string,
-    demoUrl: string,
-    srcCodeUrl: string
+  interface ProjectType {
+    imgUrl: string;
+    demoUrl: string;
+    srcCodeUrl: string;
   }
 
   return (

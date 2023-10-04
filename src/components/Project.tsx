@@ -1,7 +1,7 @@
-type Props = {
-    imgUrl: string,
-    demoUrl: string,
-    srcCodeUrl: string
+interface Props {
+    imgUrl: string;
+    demoUrl: string;
+    srcCodeUrl: string;
 }
 
 const Project = (props: Props) => {
