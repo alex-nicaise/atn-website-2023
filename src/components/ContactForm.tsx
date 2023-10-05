@@ -1,14 +1,11 @@
-import { FormikHelpers, useFormik } from 'formik';
-import React from 'react';
+import { useFormik } from 'formik';
+import React, { useRef } from 'react';
 import * as Yup from 'yup';
+import emailjs from "@emailjs/browser";
 
 const ContactForm = (): React.JSX.Element => {
 
-    interface formValues {
-        fullName: string;
-        email: string;
-        message: string;
-    }
+    const formRef= useRef("");
 
     const formik = useFormik({
         initialValues: {
@@ -22,9 +19,13 @@ const ContactForm = (): React.JSX.Element => {
             email: Yup.string().email('Invalid Email').required('Required'),
             message: Yup.string().max(500, 'Value must be under 500 characters.').required('Required')
         }),
-        onSubmit: (values: formValues, { setSubmitting }: FormikHelpers<formValues>) => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
+
+        onSubmit: ():void => {
+
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formRef.current, 'YOUR_PUBLIC_KEY')
+            .then((result)=>console.log(result),
+            (error)=>{console.log(error)});
+
         }
     })
 
