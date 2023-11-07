@@ -1,14 +1,20 @@
 import React from 'react';
 import Project from "./Project";
 import projectsObj from "../API/projectsObj";
-import ContactForm from "./ContactForm";
+import projectType from "../tsHooks/projectType";
+import { Tooltip } from "@mui/material";
 
 const Main = (): React.JSX.Element => {
 
-  interface ProjectType {
-    imgUrl: string;
-    demoUrl: string;
-    srcCodeUrl: string;
+  const handleEmailClick = async () => {
+    const myEmail = "atnicais@gmail.com";
+
+    try{
+      await navigator.clipboard.writeText(myEmail);
+      alert("Copied Email!")
+    } catch (err) {
+      alert(`Email could not be coppied: ${err}`)
+    }
   }
 
   return (
@@ -21,7 +27,7 @@ const Main = (): React.JSX.Element => {
         <div id="projects">
           <h1>Projects</h1>
           {
-            projectsObj.map((project: ProjectType, index: number) => {
+            projectsObj.map((project: projectType, index: number) => {
               return <Project
               key={index}
               imgUrl={project.imgUrl}
@@ -32,7 +38,11 @@ const Main = (): React.JSX.Element => {
         </div>
         <div id="contact">
           <h1>Contact Me</h1>
-          <ContactForm/>
+          <Tooltip title="Copy Email" placement="top" arrow>
+            <p onClick={handleEmailClick}>
+              Feel free to email me here!
+            </p>
+          </Tooltip>
         </div>
     </main>
   )

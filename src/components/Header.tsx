@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from "/nicaise-logo-LARGE-V2.png";
 
 const Header = (): React.JSX.Element => {
   return (

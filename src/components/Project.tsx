@@ -1,12 +1,7 @@
 import React from 'react';
+import projectType from '../tsHooks/projectType';
 
-interface Props {
-    imgUrl: string;
-    demoUrl: string;
-    srcCodeUrl: string;
-}
-
-const Project = (props: Props): React.JSX.Element => {
+const Project = (props: projectType): React.JSX.Element => {
   return (
     <div className="project">
         <div className="project-img" style={{backgroundImage: `url(${props.imgUrl})`}}></div>
