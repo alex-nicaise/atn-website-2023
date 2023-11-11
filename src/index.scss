@@ -1,10 +1,79 @@
+$borderBottom: 1px solid #666;
+
+@mixin main-button ($bColor: #333, $textColor: white){
+    background-color: $bColor;
+    color: $textColor;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
 body {
-    background-color: #333;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    padding: 50px 25px;
+    background-color: #999;
     color: white;
 }
 
-#header {
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: $borderBottom;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+
     img {
-        max-height: 100px;
+        max-height: 65px;
+    }
+
+    div {
+        button{
+            @include main-button;
+        }
+    }
+}
+
+#intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: $borderBottom;
+    padding-bottom: 75px;
+
+    #main-illo{
+        max-height: 450px;
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+
+    p{
+        max-width: 450px;
+    }
+}
+
+#projects{
+    .project{
+        .project-img {
+            aspect-ratio: 2 / 1;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .project-btn-group{
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+
+            button{
+                @include main-button;
+
+                &:last-child{
+                    margin-left: 5px;
+                }
+            }
+        }
     }
 }
