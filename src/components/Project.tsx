@@ -7,8 +7,8 @@ const Project = (props: projectType): React.JSX.Element => {
         <p>{props.notes}</p>
         <div className="project-img" style={{backgroundImage: `url(${props.imgUrl})`}}></div>
         <div className="project-btn-group">
-            <a href={props.demoUrl}><button>Demo</button></a>
-            <a href={props.srcCodeUrl}><button>Source Code</button></a>
+            <a href={props.demoUrl} target="_blank"><button>Demo</button></a>
+            <a href={props.srcCodeUrl} target="_blank"><button>Source Code</button></a>
         </div>
     </div>
   )

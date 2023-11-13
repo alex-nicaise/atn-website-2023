@@ -7,8 +7,8 @@ const projectsObj = [
     },
     {
         title: "Weathur Forecast App",
-        imgUrl: "",
-        demoUrl: "",
+        imgUrl: "/proj-screenshots/weathur-scsh.png",
+        demoUrl: "https://ubiquitous-basbousa-ae533a.netlify.app/",
         srcCodeUrl: "https://github.com/alex-nicaise/theme-weather-app"
     },
     {
