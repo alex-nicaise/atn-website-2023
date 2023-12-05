@@ -1,7 +1,7 @@
 const projectsObj = [
     {
         title: "Little Lemon Reserve App",
-        imgUrl: "",
+        imgUrl: "/proj-screenshots/little-lemon-scsh.png",
         demoUrl: "https://warm-kheer-56c697.netlify.app/",
         srcCodeUrl: "https://github.com/alex-nicaise/ll-reserve-app"
     },

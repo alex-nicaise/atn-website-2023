@@ -3,7 +3,7 @@ type projectType = {
     imgUrl: string;
     demoUrl: string;
     srcCodeUrl: string;
-    notes: string | null;
+    notes?: string;
 }
 
 export default projectType;

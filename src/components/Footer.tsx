@@ -6,7 +6,7 @@ const Footer = (): React.JSX.Element => {
             <img/>
             <img/>
         </div>
-        <p>Copyright Claim</p>
+        <p>Alexander Nicaise © {new Date().getFullYear()} · All Rights Reserved.</p>
     </div>
   )
 }

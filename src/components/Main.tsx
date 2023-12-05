@@ -2,7 +2,7 @@ import myIllo  from "/nicaise-desk-splash-v3.png"
 import Project from "./Project";
 import projectsObj from "../API/projectsObj";
 import projectType from "../tsHooks/projectType";
-import Contact from './Contact';
+import Tools from "./Tools";
 
 const Main = (): React.JSX.Element => {
 
@@ -15,6 +15,7 @@ const Main = (): React.JSX.Element => {
         </div>
         <div id="projects">
           <h1>Projects</h1>
+          <div id="projects-container">
           {
             projectsObj.map((project: projectType, index: number):React.JSX.Element => {
               return <Project
@@ -26,9 +27,10 @@ const Main = (): React.JSX.Element => {
               notes={project.notes}/>
             })
           }
+          </div>
         </div>
         <div id="contact">
-          <Contact/>
+          <Tools/>
         </div>
     </main>
   )

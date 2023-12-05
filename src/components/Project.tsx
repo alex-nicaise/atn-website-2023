@@ -4,7 +4,7 @@ const Project = (props: projectType): React.JSX.Element => {
   return (
     <div className="project">
         <h4>{props.title}</h4>
-        <p>{props.notes}</p>
+        <p className="italicized">{props.notes}</p>
         <div className="project-img" style={{backgroundImage: `url(${props.imgUrl})`}}></div>
         <div className="project-btn-group">
             <a href={props.demoUrl} target="_blank"><button>Demo</button></a>
