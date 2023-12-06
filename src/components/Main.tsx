@@ -8,14 +8,14 @@ const Main = (): React.JSX.Element => {
 
   return (
     <main>
-        <div id="intro">
+        <article id="intro">
           <img id="main-illo" src={myIllo}/>
-          <h2>Hello, My name is Alex.</h2>
+          <h1>Hello, My name is Alex.</h1>
           <p>I'm an aspiring Front End Developer from Queens, who enjoys the challenges of coding and loves to learn.</p>
-        </div>
-        <div id="projects">
+        </article>
+        <article id="projects">
           <h1>Projects</h1>
-          <div id="projects-container">
+          <section id="projects-container">
           {
             projectsObj.map((project: projectType, index: number):React.JSX.Element => {
               return <Project
@@ -27,11 +27,11 @@ const Main = (): React.JSX.Element => {
               notes={project.notes}/>
             })
           }
-          </div>
-        </div>
-        <div id="contact">
+          </section>
+        </article>
+        <article id="tools">
           <Tools/>
-        </div>
+        </article>
     </main>
   )
 

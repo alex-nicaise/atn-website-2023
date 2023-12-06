@@ -1,3 +1,11 @@
+h1 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
 body {
   overflow-x: hidden;
   font-family: "Roboto", "Helvetica", sans-serif;
@@ -18,7 +26,19 @@ header {
 header img {
   max-height: 65px;
 }
-header div button {
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav section > a {
+  width: 40px !important;
+  height: 40px !important;
+}
+header nav button, header nav section, header nav section > a:last-child {
+  margin-left: 10px;
+}
+header nav button {
   background-color: #333;
   color: white;
   padding: 10px 15px;
@@ -44,6 +64,11 @@ header div button {
   max-width: 450px;
 }
 
+#projects {
+  border-bottom: 1px solid #666;
+  padding-bottom: 75px;
+  margin-bottom: 75px;
+}
 #projects h1 {
   margin-bottom: 50px;
   text-align: center;
@@ -53,7 +78,8 @@ header div button {
 }
 #projects .project p.italicized {
   font-style: italic;
-  font-size: 0.75em;
+  font-weight: 100;
+  font-size: 1em;
 }
 #projects .project .project-img {
   aspect-ratio: 2/1;
@@ -78,13 +104,19 @@ header div button {
   margin-left: 5px;
 }
 
-#footer {
+footer {
   background-color: #777;
   margin-left: -26px;
   margin-right: -26px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+footer #social-icons, footer p {
+  display: block;
+  min-width: 100vw;
+  text-align: center;
 }
 
 @media (min-width: 992px) {
