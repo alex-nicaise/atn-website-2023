@@ -104,6 +104,30 @@ header nav button {
   margin-left: 5px;
 }
 
+#tools {
+  text-align: center;
+  margin-bottom: 75px;
+}
+#tools h1 {
+  margin-bottom: 50px;
+}
+#tools #programming-icons {
+  display: flex;
+  justify-content: center;
+  row-gap: 25px;
+  column-gap: 15px;
+  flex-wrap: wrap;
+}
+#tools #programming-icons .pi-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tools #programming-icons svg {
+  width: 65px !important;
+  height: 65px !important;
+}
+
 footer {
   background-color: #777;
   margin-left: -26px;
@@ -125,6 +149,14 @@ footer #social-icons, footer p {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 25px;
     grid-row-gap: 50px;
+  }
+}
+@media (max-width: 615px) {
+  #programming-icons {
+    column-gap: 5px !important;
+  }
+  #programming-icons .pi-flex-container {
+    flex-basis: 22%;
   }
 }
 
