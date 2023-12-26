@@ -7,6 +7,11 @@ $navMarginLeft: 10px;
     padding: 10px 15px;
     border: 1px solid transparent;
     border-radius: 5px;
+    transition: background-color .2s ease-in-out;
+
+    &:hover{
+        background-color: #666;
+    }
 }
 
 @mixin italicized {
@@ -50,10 +55,20 @@ header {
 
     nav {
         display: flex;
+        column-gap: 5px;
         justify-content: center;
         align-items: center;
 
-        section > a {
+        a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .social-icon {
             width: 40px !important;
             height: 40px !important;
         }
@@ -99,22 +114,33 @@ header {
 
         text-align: center;
 
+        &:last-child{
+            .project-btn-group {
+                margin-bottom: 0px;
+            }
+        }
+
+        h4 {
+            margin-bottom: 15px;
+        }
+
         p.italicized{
             @include italicized();
             font-weight: 100;
             font-size: 1em;
+            margin-top: 0px;
         }
 
         .project-img {
-            aspect-ratio: 2 / 1;
+            aspect-ratio: 16 / 9;
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            border-radius: 25px;
+            border-radius: 10px;
         }
 
         .project-btn-group{
-            margin-top: 15px;
+            margin: 15px 0px 35px 0px;
             display: flex;
             justify-content: center;
 
@@ -179,7 +205,7 @@ footer{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 25px;
-        grid-row-gap: 50px;
+        grid-row-gap: 35px;
     }
 }
 

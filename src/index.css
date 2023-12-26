@@ -28,10 +28,18 @@ header img {
 }
 header nav {
   display: flex;
+  column-gap: 5px;
   justify-content: center;
   align-items: center;
 }
-header nav section > a {
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+header nav .social-icon {
   width: 40px !important;
   height: 40px !important;
 }
@@ -44,6 +52,10 @@ header nav button {
   padding: 10px 15px;
   border: 1px solid transparent;
   border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+header nav button:hover {
+  background-color: #666;
 }
 
 #intro {
@@ -76,20 +88,27 @@ header nav button {
 #projects .project {
   text-align: center;
 }
+#projects .project:last-child .project-btn-group {
+  margin-bottom: 0px;
+}
+#projects .project h4 {
+  margin-bottom: 15px;
+}
 #projects .project p.italicized {
   font-style: italic;
   font-weight: 100;
   font-size: 1em;
+  margin-top: 0px;
 }
 #projects .project .project-img {
-  aspect-ratio: 2/1;
+  aspect-ratio: 16/9;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 #projects .project .project-btn-group {
-  margin-top: 15px;
+  margin: 15px 0px 35px 0px;
   display: flex;
   justify-content: center;
 }
@@ -99,6 +118,10 @@ header nav button {
   padding: 10px 15px;
   border: 1px solid transparent;
   border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+#projects .project .project-btn-group button:hover {
+  background-color: #666;
 }
 #projects .project .project-btn-group button:last-child {
   margin-left: 5px;
@@ -148,7 +171,7 @@ footer #social-icons, footer p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 25px;
-    grid-row-gap: 50px;
+    grid-row-gap: 35px;
   }
 }
 @media (max-width: 615px) {

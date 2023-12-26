@@ -12,7 +12,7 @@ const Header = (): React.JSX.Element => {
       await navigator.clipboard.writeText(myEmail);
       alert("Copied Email!")
     } catch (err) {
-      alert(`Email could not be coppied: ${err}`)
+      alert(`Email could not be copied: ${err}`)
     }
   }
 
