@@ -40,7 +40,6 @@ const Header = (): React.JSX.Element => {
         </Tooltip>
         <SocialIcons/>
       </nav>
-
     </header>
   )
 }

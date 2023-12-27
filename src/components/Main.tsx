@@ -11,7 +11,7 @@ const Main = (): React.JSX.Element => {
         <article id="intro">
           <img id="main-illo" src={myIllo}/>
           <h1>Hello, My name is Alex.</h1>
-          <p>I'm an aspiring Front End Developer from Queens, who enjoys the challenges of coding and loves to learn.</p>
+          <p>I'm an aspiring Front End Developer from New York who enjoys the challenges of coding and loves to learn.</p>
         </article>
         <article id="projects">
           <h1>Projects</h1>

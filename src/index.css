@@ -7,12 +7,16 @@ h4 {
 }
 
 body {
-  overflow-x: hidden;
+  position: relative;
   font-family: "Roboto", "Helvetica", sans-serif;
   padding: 50px 25px 0px 25px;
   background-color: #999;
   color: white;
   margin: 0px;
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 header {
@@ -152,13 +156,25 @@ header nav button:hover {
 }
 
 footer {
+  position: absolute;
   background-color: #777;
   margin-left: -26px;
   margin-right: -26px;
+  padding: 20px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+footer .social-icon {
+  max-height: 30px;
+  max-width: 30px;
+}
+footer .social-icon:last-child {
+  margin-left: 10px;
+}
+footer .social-icon .social-svg {
+  border-radius: 10% !important;
 }
 footer #social-icons, footer p {
   display: block;
@@ -180,6 +196,33 @@ footer #social-icons, footer p {
   }
   #programming-icons .pi-flex-container {
     flex-basis: 22%;
+  }
+}
+@media (max-width: 450px) {
+  body {
+    padding-top: 25px;
+  }
+  header {
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+  }
+  header img {
+    max-height: 50px;
+  }
+  header #social-icons {
+    display: none;
+  }
+  #intro {
+    padding-bottom: 30px !important;
+    margin-bottom: 30px !important;
+  }
+  #projects {
+    padding-bottom: 30px !important;
+    margin-bottom: 30px !important;
+  }
+  #tools {
+    padding-bottom: 30px !important;
+    margin-bottom: 30px !important;
   }
 }
 

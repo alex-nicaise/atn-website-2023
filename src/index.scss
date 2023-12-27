@@ -24,6 +24,11 @@ $navMarginLeft: 10px;
     margin-bottom: 75px;
 }
 
+@mixin padding-margin-response {
+    padding-bottom: 30px !important;
+    margin-bottom: 30px !important;
+}
+
 h1{
     font-size: 2em;
 }
@@ -33,12 +38,16 @@ h4{
 }
 
 body {
-    overflow-x: hidden;
+    position: relative;
     font-family: 'Roboto', 'Helvetica', sans-serif;
     padding: 50px 25px 0px 25px;
     background-color: #999;
     color: white;
     margin: 0px;
+}
+
+#root{
+    overflow-x: hidden;
 }
 
 header {
@@ -185,13 +194,28 @@ header {
 }
 
 footer{
+    position: absolute;
     background-color: #777;
     margin-left: -26px;
     margin-right: -26px;
+    padding: 20px 0px 0px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .social-icon {
+        max-height: 30px;
+        max-width: 30px;
+
+        &:last-child {
+            margin-left: $navMarginLeft;
+        }
+
+        .social-svg{
+            border-radius: 10% !important;
+        }
+    }
 
     #social-icons, p{
         display: block;
@@ -217,4 +241,36 @@ footer{
             flex-basis: 22%;
         }
     }
+}
+
+@media (max-width: 450px){
+    body{
+        padding-top: 25px;
+    }
+
+    header{
+        padding-bottom: 25px;
+        margin-bottom: 50px;
+
+        img {
+            max-height: 50px;
+        }
+
+        #social-icons{
+            display: none;
+        }
+    }
+
+    #intro{
+        @include padding-margin-response();
+    }
+
+    #projects{
+        @include padding-margin-response();
+    }
+
+    #tools{
+        @include padding-margin-response();
+    }
+
 }
