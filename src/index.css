@@ -1,22 +1,39 @@
+html {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "Helvetica", sans-serif;
+  background-color: #999;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin: 0px auto;
+}
+
+#root {
+  padding: 50px 25px 0px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
   font-size: 2em;
 }
 
 h4 {
   font-size: 1.25em;
-}
-
-body {
-  position: relative;
-  font-family: "Roboto", "Helvetica", sans-serif;
-  padding: 50px 25px 0px 25px;
-  background-color: #999;
-  color: white;
-  margin: 0px;
-}
-
-#root {
-  overflow-x: hidden;
 }
 
 header {
@@ -77,17 +94,19 @@ header nav button:hover {
   margin-bottom: 25px;
 }
 #intro p {
+  width: 100%;
   max-width: 450px;
 }
 
 #projects {
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid #666;
   padding-bottom: 75px;
   margin-bottom: 75px;
 }
 #projects h1 {
-  margin-bottom: 50px;
-  text-align: center;
+  margin: 0px auto 50px auto;
 }
 #projects .project {
   text-align: center;
@@ -96,7 +115,7 @@ header nav button:hover {
   margin-bottom: 0px;
 }
 #projects .project h4 {
-  margin-bottom: 15px;
+  margin: 15px auto;
 }
 #projects .project p.italicized {
   font-style: italic;
@@ -110,6 +129,8 @@ header nav button:hover {
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: 10px;
+  width: 100%;
+  max-width: 100%;
 }
 #projects .project .project-btn-group {
   margin: 15px 0px 35px 0px;
@@ -136,7 +157,7 @@ header nav button:hover {
   margin-bottom: 75px;
 }
 #tools h1 {
-  margin-bottom: 50px;
+  margin: 0px auto 50px auto;
 }
 #tools #programming-icons {
   display: flex;
@@ -156,15 +177,13 @@ header nav button:hover {
 }
 
 footer {
-  position: absolute;
   background-color: #777;
-  margin-left: -26px;
-  margin-right: -26px;
-  padding: 20px 0px 0px 0px;
+  padding: 20px 15px 0px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 -25px;
 }
 footer .social-icon {
   max-height: 30px;
@@ -176,9 +195,7 @@ footer .social-icon:last-child {
 footer .social-icon .social-svg {
   border-radius: 10% !important;
 }
-footer #social-icons, footer p {
-  display: block;
-  min-width: 100vw;
+footer p {
   text-align: center;
 }
 
@@ -201,6 +218,9 @@ footer #social-icons, footer p {
 @media (max-width: 450px) {
   body {
     padding-top: 25px;
+  }
+  #root {
+    padding: 0px 15px;
   }
   header {
     padding-bottom: 25px;
