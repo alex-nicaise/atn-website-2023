@@ -3,6 +3,8 @@ import Logo from "/nicaise-logo-LARGE-V2.png";
 import { Link } from "react-router-dom";
 import SocialIcons from "./SocialIcons";
 
+const resumeFile = "/alex_nicaise_resume_2023.pdf";
+
 const Header = (): React.JSX.Element => {
 
   const handleEmailClick = async () => {
@@ -22,7 +24,7 @@ const Header = (): React.JSX.Element => {
 
 
       <nav>
-        <Link to="/">Resume</Link>
+        <Link to={resumeFile} target="_blank">Resume</Link>
         <Tooltip title="Copy Email" placement="top" arrow>
           <button onClick={handleEmailClick}>Contact Me</button>
         </Tooltip>
