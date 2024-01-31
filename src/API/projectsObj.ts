@@ -7,7 +7,7 @@ const projectsObj = [
   },
   {
     title: "Weathur Forecast App",
-    imgUrl: "/proj-screenshots/weathur-scsh.png",
+    imgUrl: "/proj-screenshots/weathur-v2-scsh.png",
     demoUrl: "https://lucky-daffodil-1977bd.netlify.app/",
     srcCodeUrl: "https://github.com/alex-nicaise/theme-weather-app",
   },
